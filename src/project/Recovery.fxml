@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1360.0" style="-fx-background-color: white;" stylesheets="@AddToCart.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.RecoveryController">
+   <children>
+      <TextField fx:id="shopSearchBar" alignment="CENTER" layoutX="28.0" layoutY="138.0" prefHeight="58.0" prefWidth="444.0" promptText=" Search Shop" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="142.0" layoutY="49.0" prefHeight="36.0" prefWidth="216.0" text="Make a Recovery" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="51.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: white;" styleClass="backButtonIcon" stylesheets="@background.css" />
+      <Button layoutX="377.0" layoutY="145.0" mnemonicParsing="false" onAction="#searchShop" prefHeight="44.0" prefWidth="71.0" styleClass="searchIcon" stylesheets="@background.css" />
+            <TableView fx:id="shop_table" layoutX="28.0" layoutY="208.0" onMouseClicked="#shopTableViewAction" prefHeight="444.0" prefWidth="444.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="col_shopName" prefWidth="96.0" text="Shop Name" />
+                <TableColumn fx:id="col_ownerName" prefWidth="106.00003051757812" text="Owner Name" />
+                  <TableColumn fx:id="col_address" minWidth="0.0" prefWidth="139.0" text="Address" />
+                  <TableColumn fx:id="col_city" prefWidth="79.0" text="City" />
+                  <TableColumn fx:id="col_phone" minWidth="0.0" prefWidth="100.0" text="Phone Number" />
+              </columns>
+            </TableView>
+      <Separator layoutX="75.0" layoutY="108.0" prefHeight="3.0" prefWidth="1221.0" style="-fx-background-color: #ff0000;" />
+      <Label layoutX="944.0" layoutY="155.0" prefHeight="27.0" prefWidth="189.0" text="Recent Recoveries" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="944.0" layoutY="188.0" prefHeight="3.0" prefWidth="308.0" style="-fx-background-color: #ff0000;" />
+      <Button contentDisplay="CENTER" layoutX="1100.0" layoutY="49.0" mnemonicParsing="false" onAction="#recover" prefHeight="35.0" prefWidth="152.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="RECOVER" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="orderLineView_table" layoutX="496.0" layoutY="265.0" prefHeight="385.0" prefWidth="419.0" style="-fx-border-color: black;" stylesheets="@AddToCart.css">
+        <columns>
+          <TableColumn fx:id="col_order_date" prefWidth="115.0" text="Date" />
+            <TableColumn fx:id="col_product" minWidth="0.0" prefWidth="134.0" text="Product Name" />
+            <TableColumn fx:id="col_price" prefWidth="77.0" text="Price" />
+            <TableColumn fx:id="col_quantity" prefWidth="76.0" text="Quantity" />
+        </columns>
+      </TableView>
+      <TableView fx:id="recovery_table" layoutX="944.0" layoutY="265.0" prefHeight="385.0" prefWidth="351.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="col_recovery_date" prefWidth="163.0" text="Date" />
+          <TableColumn fx:id="col_recovery_amount" prefWidth="186.0" text="Amount Received" />
+        </columns>
+      </TableView>
+      <Label layoutX="496.0" layoutY="155.0" prefHeight="27.0" prefWidth="130.0" text="Recent Order" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="496.0" layoutY="189.0" prefHeight="3.0" prefWidth="308.0" style="-fx-background-color: #ff0000;" />
+      <TextField fx:id="recoveryAmount" alignment="CENTER" layoutX="920.0" layoutY="49.0" prefHeight="36.0" prefWidth="163.0" style="-fx-border-color: red; -fx-border-radius: 100; -fx-border-width: 2pt; -fx-background-radius: 100;" />
+      <Label layoutX="496.0" layoutY="60.0" prefHeight="27.0" prefWidth="216.0" text="Out Standing Balance:" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="outStandingBalance" layoutX="733.0" layoutY="60.0" prefHeight="27.0" prefWidth="99.0" text="0" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button contentDisplay="CENTER" layoutX="1080.0" layoutY="215.0" mnemonicParsing="false" onAction="#recover" prefHeight="36.0" prefWidth="107.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="FILTER" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <RadioButton layoutX="604.0" layoutY="218.0" mnemonicParsing="false" selected="true" text="All" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="718.0" layoutY="218.0" mnemonicParsing="false" text="This Month" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="897.0" layoutY="218.0" mnemonicParsing="false" text="This Week" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </RadioButton>
+    </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="710" prefWidth="1360" style="-fx-background-color: white;" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
+    <children>
+        <Button fx:id="button" layoutX="35.0" layoutY="48.0" onAction="#addProductEvent" prefHeight="303.0" prefWidth="319.0" stylesheets="@background.css">
+         <styleClass>
+            <String fx:value="addProduct" />
+            <String fx:value="button" />
+         </styleClass></Button>
+      <Button fx:id="button1" layoutX="354.0" layoutY="48.0" onAction="#addToCartEvent" prefHeight="303.0" prefWidth="319.0" styleClass="addCart" stylesheets="@background.css" />
+      <Button fx:id="button2" layoutX="35.0" layoutY="386.0" onAction="#addShipmentEvent" prefHeight="303.0" prefWidth="319.0" styleClass="shipment" stylesheets="@background.css" />
+      <Button fx:id="button3" layoutX="354.0" layoutY="386.0" onAction="#addToCartForShopEvent" prefHeight="303.0" prefWidth="319.0" styleClass="addToCartForShops" stylesheets="@background.css" />
+      <Button fx:id="button4" layoutX="680.0" layoutY="48.0" onAction="#searchAndRepairEvent" prefHeight="303.0" prefWidth="319.0" styleClass="repair" stylesheets="@background.css" />
+      <Button fx:id="button41" layoutX="999.0" layoutY="48.0" onAction="#addShopEvent" prefHeight="303.0" prefWidth="319.0" styleClass="addShop" stylesheets="@background.css" />
+      <Button fx:id="button31" layoutX="680.0" layoutY="386.0" onAction="#recoveryEvent" prefHeight="303.0" prefWidth="319.0" styleClass="recovery" stylesheets="@background.css" />
+      <Button fx:id="button311" layoutX="999.0" layoutY="386.0" onAction="#reportsEvent" prefHeight="303.0" prefWidth="319.0" styleClass="report" stylesheets="@background.css" />
+    </children>
+   <styleClass>
+      <String fx:value="backgrond" />
+      <String fx:value="backgrond" />
+   </styleClass>
+</AnchorPane>

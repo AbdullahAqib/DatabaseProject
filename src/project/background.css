@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 7, 2019, 8:16:38 PM
+    Author     : abdul
+*/
+
+.addProduct{
+    -fx-background-image: url('images/addProduct.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.reportsBackground{
+    -fx-background-image: url('images/reportsBackground.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.addToCartForShops{
+    -fx-background-image: url('images/addToCartForShops.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.shipment{
+    -fx-background-image: url('images/shipment.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.shopBackground{
+    -fx-background-image: url('images/shopBackground.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.repair{
+    -fx-background-image: url('images/repair.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.searchAndRepairFormBackground{
+    -fx-background-image: url('images/searchAndRepairFormBackground.jpeg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.searchIcon{
+    -fx-background-image: url('images/searchIcon.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.backButtonIcon{
+    -fx-background-image: url('images/backIcon.jpg');
+    -fx-background-color: red;
+    -fx-background-size: 100% 100%; 
+    -fx-border-color: red;
+}
+
+.addProductFormBackground{
+    -fx-background-image: url('images/addProductFormBackground.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.report{
+    -fx-background-image: url('images/report.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.addShop{
+    -fx-background-image: url('images/shop.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.addCart{
+    -fx-background-image: url('images/addCart.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.recovery{
+    -fx-background-image: url('images/recovery.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.addStockButtonBackground{
+    -fx-background-image: url('images/addStock.jpg');
+    -fx-background-size: 100% 100%; 
+    -fx-background-color: white;
+    -fx-border-color: white;
+}
+
+.button:hover{
+    -fx-opacity: 0.7;
+}
+
+.backgrond{
+    -fx-background-color: white;
+}
+
+.backgroundPerfumeAdd{
+    -fx-background-image: url('perfume.jpg');
+}
+.perfume{
+    -fx-background-image: url('perfume.jpg');
+    -fx-background-size: 100% 100%; 
+}

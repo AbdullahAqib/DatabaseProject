@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1360.0" style="-fx-background-color: white;" stylesheets="@AddToCart.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.AddToCartController">
+   <children>
+      <TextField fx:id="searchBar" alignment="CENTER" layoutX="260.0" layoutY="125.0" prefHeight="51.0" prefWidth="562.0" promptText="Search" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="267.0" layoutY="40.0" text="ADD TO CART" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="710.0" prefWidth="255.0">
+         <children>
+            <Button layoutX="29.0" layoutY="29.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="51.0" prefWidth="99.0" style="-fx-background-color: white; -fx-border-color: white;" styleClass="backButtonIcon" stylesheets="@background.css" />
+            <TableView fx:id="data_table" layoutX="13.0" layoutY="160.0" onMouseClicked="#getSelectedItem" prefHeight="385.0" prefWidth="255.0">
+              <columns>
+                <TableColumn fx:id="col_name" prefWidth="119.0" text="Name" />
+                <TableColumn fx:id="col_retailRate" prefWidth="73.0" text="Price" />
+                  <TableColumn fx:id="col_size" prefWidth="55.0" text="Size" />
+              </columns>
+            </TableView>
+         </children></Pane>
+      <Separator layoutX="257.0" layoutY="108.0" prefHeight="3.0" prefWidth="1039.0" style="-fx-background-color: #ff0000;" />
+      <Label layoutX="389.0" layoutY="261.0" opacity="0.5" text="Size" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" alignment="CENTER" layoutX="382.0" layoutY="207.0" prefHeight="31.0" prefWidth="369.0" promptText="Product Name" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="std" layoutX="440.0" layoutY="266.0" mnemonicParsing="false" opacity="0.49" selected="true" text="Std" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="size" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="small" layoutX="512.0" layoutY="266.0" mnemonicParsing="false" opacity="0.49" text="Small" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="medium" layoutX="602.0" layoutY="266.0" mnemonicParsing="false" opacity="0.5" text="Medium" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="large" layoutX="690.0" layoutY="266.0" mnemonicParsing="false" opacity="0.5" text="Large" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="quantity" alignment="CENTER" layoutX="382.0" layoutY="304.0" prefHeight="37.0" prefWidth="145.0" promptText="Quantity" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button contentDisplay="CENTER" layoutX="587.0" layoutY="305.0" mnemonicParsing="false" onAction="#increaseByOne" prefHeight="35.0" prefWidth="35.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="+" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="690.0" layoutY="305.0" mnemonicParsing="false" onAction="#decreasesByOne" prefHeight="35.0" prefWidth="38.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="-" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="16.0" />
+         </font>
+      </Button>
+      <RadioButton layoutX="461.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#setRetailRate" opacity="0.49" selected="true" text="Retail Sale Rate" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="toggle_rate" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="606.0" layoutY="376.0" mnemonicParsing="false" onMouseClicked="#setWholeSaleRate" opacity="0.49" text="Whole Sale Rate" textFill="RED" toggleGroup="$toggle_rate">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="discount" alignment="CENTER" layoutX="382.0" layoutY="426.0" prefHeight="37.0" prefWidth="369.0" promptText="Discount" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price" alignment="CENTER" layoutX="382.0" layoutY="489.0" prefHeight="31.0" prefWidth="369.0" promptText="Price in Rupees" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btn_addToList" contentDisplay="CENTER" layoutX="602.0" layoutY="570.0" mnemonicParsing="false" onAction="#addDataToOrderTable" prefHeight="35.0" prefWidth="152.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="ADD TO LIST" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fill="RED" layoutX="398.0" layoutY="234.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="T">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Separator layoutX="914.0" layoutY="137.0" orientation="VERTICAL" prefHeight="467.0" prefWidth="0.0" style="-fx-background-color: #ff0000;" />
+      <Label layoutX="390.0" layoutY="371.0" opacity="0.5" text="Rate" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalAmount_txt" alignment="CENTER" disable="true" layoutX="1119.0" layoutY="634.0" prefHeight="37.0" prefWidth="189.0" promptText="Total Amount" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="958.0" layoutY="124.0" prefHeight="27.0" prefWidth="59.0" text="BILL" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="932.0" layoutY="157.0" prefHeight="3.0" prefWidth="308.0" style="-fx-background-color: #ff0000;" />
+      <Button layoutX="732.0" layoutY="129.0" mnemonicParsing="false" onAction="#searchProduct" prefHeight="44.0" prefWidth="71.0" styleClass="searchIcon" stylesheets="@background.css" />
+      <Button fx:id="btn_addToList1" contentDisplay="CENTER" layoutX="951.0" layoutY="635.0" mnemonicParsing="false" onAction="#check" prefHeight="35.0" prefWidth="152.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100; -fx-border-width: 2pt;" text="CHECK" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="order_table" layoutX="941.0" layoutY="191.0" prefHeight="397.0" prefWidth="351.0" stylesheets="@AddToCart.css">
+        <columns>
+          <TableColumn fx:id="product_col" prefWidth="171.0" text="Product Name" />
+            <TableColumn fx:id="price_col" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="quantity_col" prefWidth="79.0" text="Quantity" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1360.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.ReportsController">
+   <children>
+      <Button layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="54.0" prefWidth="89.0" style="-fx-background-color: white; -fx-border-color: white;" styleClass="backButtonIcon" stylesheets="@background.css" />
+      <LineChart fx:id="salesLineChart" layoutX="26.0" layoutY="194.0" prefHeight="373.0" prefWidth="431.0">
+        <xAxis>
+          <CategoryAxis fx:id="sales_xAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="sales_yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <LineChart fx:id="recoveriesLineChart" layoutX="460.0" layoutY="194.0" prefHeight="373.0" prefWidth="441.0">
+         <xAxis>
+            <CategoryAxis fx:id="recoveries__xAxis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="recoveries_yAxis" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <LineChart fx:id="shipmentLineChart" layoutX="901.0" layoutY="194.0" prefHeight="373.0" prefWidth="441.0">
+         <xAxis>
+            <CategoryAxis fx:id="shipment_xAxis" side="BOTTOM" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="shipment_yAxis" side="LEFT" />
+         </yAxis>
+      </LineChart>
+      <Pane layoutX="144.0" layoutY="13.0" prefHeight="187.0" prefWidth="1157.0" styleClass="reportsBackground" stylesheets="@background.css" />
+   </children>
+</AnchorPane>

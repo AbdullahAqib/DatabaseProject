@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="710.0" prefWidth="1360.0" style="-fx-background-color: white;" styleClass="addProductFormBackground" stylesheets="@background.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.AddProductController">
+   <children>
+      <Label layoutX="213.0" layoutY="45.0" text="ADD NEW PRODUCT" textFill="RED">
+         <font>
+            <Font name="Calibri Bold" size="23.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="710.0" prefWidth="162.0" style="-fx-background-color: #ff0000;">
+         <children>
+            <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="60.0" prefWidth="111.0" styleClass="backButtonIcon" stylesheets="@background.css" />
+         </children></Pane>
+      <Separator layoutX="189.0" layoutY="98.0" prefHeight="0.0" prefWidth="1097.0" style="-fx-background-color: #ff0000;" />
+      <Label layoutX="379.0" layoutY="251.0" opacity="0.5" text="Size" textFill="RED">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" alignment="CENTER" layoutX="372.0" layoutY="136.0" prefHeight="31.0" prefWidth="369.0" promptText="Product Name" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="sort" alignment="CENTER" layoutX="372.0" layoutY="197.0" prefHeight="31.0" prefWidth="369.0" promptText="Sort" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <RadioButton fx:id="std" layoutX="427.0" layoutY="256.0" mnemonicParsing="false" opacity="0.5" selected="true" text="Std" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="size" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="498.0" layoutY="256.0" mnemonicParsing="false" opacity="0.49" text="Small" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="578.0" layoutY="256.0" mnemonicParsing="false" opacity="0.5" text="Medium" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <RadioButton layoutX="670.0" layoutY="256.0" mnemonicParsing="false" opacity="0.5" text="Large" textFill="RED" toggleGroup="$size">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="company" alignment="CENTER" layoutX="372.0" layoutY="293.0" prefHeight="31.0" prefWidth="369.0" promptText="Company" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="retailRate" alignment="CENTER" layoutX="372.0" layoutY="362.0" prefHeight="31.0" prefWidth="369.0" promptText="Retail Sale Rate" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="wholeSaleRate" alignment="CENTER" layoutX="372.0" layoutY="428.0" prefHeight="31.0" prefWidth="369.0" promptText="Whole Sale Rate" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="purchaseRate" alignment="CENTER" layoutX="372.0" layoutY="495.0" prefHeight="31.0" prefWidth="369.0" promptText="Purchase Rate" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="quantity" alignment="CENTER" layoutX="372.0" layoutY="553.0" prefHeight="31.0" prefWidth="369.0" promptText="Quantity" style="-fx-background-radius: 100;">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button contentDisplay="CENTER" layoutX="578.0" layoutY="627.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="35.0" prefWidth="152.0" style="-fx-border-color: #ff0000; -fx-background-color: white; -fx-border-radius: 100;" text="ADD PRODUCT" textFill="RED">
+         <font>
+            <Font name="Cambria Bold" size="15.0" />
+         </font></Button>
+      <Text fill="RED" layoutX="388.0" layoutY="224.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="T">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="388.0" layoutY="321.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="T">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="388.0" layoutY="389.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="388.0" layoutY="455.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="388.0" layoutY="522.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="388.0" layoutY="581.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="I">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="390.0" layoutY="164.0" opacity="0.35" strokeType="OUTSIDE" strokeWidth="0.0" text="T">
+         <font>
+            <Font name="Batang" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
